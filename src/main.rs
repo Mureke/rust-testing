@@ -9,15 +9,24 @@ fn largest<T: PartialOrd>(list: &[T]) -> &T {
 
     largest
 }
-
+use std::u8;
 fn main() {
-    let number_list = vec![34, 50, 25, 100, 65];
+    // let number_list = vec![34, 50, 25, 100, 65];
+    //
+    // let result = largest(&number_list);
+    // println!("The largest number is {}", result);
+    //
+    // let char_list = vec!['y', 'm', 'a', 'q'];
+    //
+    // let result = largest(&char_list);
+    // println!("The largest char is {}", result);
 
-    let result = largest(&number_list);
-    println!("The largest number is {}", result);
+    let list = [[1; 32 as    usize]; 64 as usize];
+    for x in list.iter() {
+        for y in x.iter(){
+            print!("{}", y)
+        }
+        print!("\n")
+    }
 
-    let char_list = vec!['y', 'm', 'a', 'q'];
-
-    let result = largest(&char_list);
-    println!("The largest char is {}", result);
 }
